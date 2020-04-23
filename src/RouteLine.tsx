@@ -38,7 +38,7 @@ export const RouteLine: React.FC<RouteLineProps> = ({
       }
       map.addObject(newRouteLine);
 
-      setRouteLine(routeLine);
+      setRouteLine(newRouteLine);
     }
     return () => {
       if (map && routeLine) {
