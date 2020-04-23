@@ -813,7 +813,7 @@ const RouteLine = ({ shape, strokeColor, lineWidth, }) => {
                 map.removeObject(routeLine);
             }
             map.addObject(newRouteLine);
-            setRouteLine(routeLine);
+            setRouteLine(newRouteLine);
         }
         return () => {
             if (map && routeLine) {
