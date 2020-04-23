@@ -816,7 +816,7 @@ const RouteLine = ({ shape, strokeColor, lineWidth, }) => {
             setRouteLine(newRouteLine);
         }
         return () => {
-            if (map && routeLine) {
+            if (map && routeLine && routeLine.contains(map)) {
                 map.removeObject(routeLine);
             }
         };
