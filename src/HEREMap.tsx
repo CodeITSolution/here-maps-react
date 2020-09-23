@@ -106,7 +106,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
             new H.mapevents.MapEvents(newMap),
           );
 
-          const newUi = H.ui.UI.createDefault(newMap, defaultLayers);
+          const newUi = H.ui.UI.createDefault(newMap, defaultLayers, 'zh-CN');
           setBehavior(newBehavior);
           setUi(newUi);
         }
