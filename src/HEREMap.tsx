@@ -75,7 +75,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
     if (platform) {
       const defaultLayers = platform.createDefaultLayers({
         ppi: hidpi ? 320 : 72,
-        lg: 'de',
+        lg: 'ger',
       });
 
       const mapElement = document.querySelector('#map-container');
@@ -106,7 +106,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
             new H.mapevents.MapEvents(newMap),
           );
 
-          const newUi = H.ui.UI.createDefault(newMap, defaultLayers, 'de');
+          const newUi = H.ui.UI.createDefault(newMap, defaultLayers, 'ger');
           setBehavior(newBehavior);
           setUi(newUi);
         }
