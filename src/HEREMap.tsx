@@ -107,8 +107,6 @@ export const HEREMap: React.FC<HEREMapProps> = ({
           );
 
           const newUi = H.ui.UI.createDefault(newMap, defaultLayers, 'de');
-          // Remove not needed settings control
-          newUi.removeControl('mapsettings');
           setBehavior(newBehavior);
           setUi(newUi);
         }
