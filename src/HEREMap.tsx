@@ -18,6 +18,7 @@ export interface HEREMapProps extends H.Map.Options, HEvents {
   secure?: boolean;
   rasterType?: keyof H.service.DefaultLayers['raster'];
   vectorType?: keyof H.service.DefaultLayers['vector']['normal'];
+  lang?: string;
 }
 
 export const HEREMap: React.FC<HEREMapProps> = ({
@@ -32,6 +33,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
   zoom,
   rasterType,
   vectorType,
+  lang,
   children,
   ...rest
 }) => {
@@ -73,6 +75,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
     if (platform) {
       const defaultLayers = platform.createDefaultLayers({
         ppi: hidpi ? 320 : 72,
+        lg: lang ? lang : 'eng',
       });
 
       const mapElement = document.querySelector(`#${mapContainerId}`);
