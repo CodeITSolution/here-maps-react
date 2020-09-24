@@ -74,7 +74,8 @@ export const HEREMap: React.FC<HEREMapProps> = ({
   React.useEffect(() => {
     if (platform) {
       const defaultLayers = platform.createDefaultLayers({
-        ppi: hidpi ? 320 : 72
+        ppi: hidpi ? 320 : 72,
+        lg: 'zh',
       });
 
       const mapElement = document.querySelector('#map-container');
