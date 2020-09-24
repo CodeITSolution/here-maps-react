@@ -44,23 +44,23 @@ export const HEREMap: React.FC<HEREMapProps> = ({
   const [ui, setUi] = React.useState<H.ui.UI | undefined>(undefined);
   const debouncedResizeMap = debounce(resizeMap, 200);
   const [,] = useLink(
-    'https://js.api.here.com/v3/3.1/mapsjs-ui.css',
+    'https://js.api.here.com/v3/3.0/mapsjs-ui.css',
     'map-styles',
   );
   const [coreLoaded] = useScript(
-    'https://js.api.here.com/v3/3.1/mapsjs-core.js',
+    'https://js.api.here.com/v3/3.0/mapsjs-core.js',
     'core',
   );
   const [serviceLoaded] = useScript(
-    'https://js.api.here.com/v3/3.1/mapsjs-service.js',
+    'https://js.api.here.com/v3/3.0/mapsjs-service.js',
     'service',
   );
   const [uiLoaded] = useScript(
-    'https://js.api.here.com/v3/3.1/mapsjs-ui.js',
+    'https://js.api.here.com/v3/3.0/mapsjs-ui.js',
     'ui',
   );
   const [mapeventsLoaded] = useScript(
-    'https://js.api.here.com/v3/3.1/mapsjs-mapevents.js',
+    'https://js.api.here.com/v3/3.0/mapsjs-mapevents.js',
     'mapevents',
   );
   const platform = usePlatform(
