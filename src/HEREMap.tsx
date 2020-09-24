@@ -20,6 +20,7 @@ export interface HEREMapProps extends H.Map.Options, HEvents {
     layer: keyof H.service.MapType;
     mapType: keyof H.service.DefaultLayers;
   };
+  lang?: string;
 }
 
 export const HEREMap: React.FC<HEREMapProps> = ({
@@ -33,6 +34,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
   secure,
   zoom,
   setLayer,
+  lang,
   children,
   ...rest
 }) => {
@@ -75,7 +77,7 @@ export const HEREMap: React.FC<HEREMapProps> = ({
     if (platform) {
       const defaultLayers = platform.createDefaultLayers({
         ppi: hidpi ? 320 : 72,
-        lg: 'ger',
+        lg: lang ? lang : 'eng',
       });
 
       const mapElement = document.querySelector('#map-container');
